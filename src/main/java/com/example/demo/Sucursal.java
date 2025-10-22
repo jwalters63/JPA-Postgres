@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 // Definición de tabla
 @Entity
 @Table(name = "sucursal")
+@NamedQueries({
+        @NamedQuery(name="Sucursal.All", query="select e from Sucursal e")
+})
 public class Sucursal {
     // Definición de columnas
     @Id
